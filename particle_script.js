@@ -1,4 +1,3 @@
-
 // Particle code from Jason Dicks with edits
 //http://codepen.io/jsndks/pen/ogWdxe
 
@@ -17,9 +16,9 @@ pProto.draw = function() {
   this.stageConfig.context.strokeStyle = '#e0e0ff';
   this.stageConfig.context.fillStyle = "#a3a3cc";
   if (Math.random() > 0.995) {
-    this.stageConfig.context.strokeStyle = '#cc99a5';
-    this.stageConfig.context.fillStyle = "#800000";
-    this.particleConfig.modR *= 1.2;
+    this.stageConfig.context.strokeStyle = '#9900FF';
+    this.stageConfig.context.fillStyle = "#FF9900";
+    this.particleConfig.modR *= 1.8;
   }
 
   //lines

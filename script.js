@@ -11,9 +11,17 @@ var renderPage = function(to) {
     return;
   }
   $(page).fadeOut(function() {
-    $(to).fadeIn();
-    page = to;
-    if (!open) {
+    if (open) {
+      $('.main').height($(page).height());
+      $('.main').animate({
+        height: $(to).height()
+      }, 100, null, function() {
+        $(to).fadeIn();
+        page = to;
+      });
+    } else {
+      $(to).fadeIn();
+      page = to;
       $('.main').slideDown();
       open = true;
     }
@@ -44,12 +52,6 @@ var toggleCollapse = function() {
 };
 
 $(document).ready(function() {
-  $('.link').hover(function() {
-    $(this).animate({padding: '5px'}, 50);
-  }, function() {
-    $(this).animate({padding: '0'}, 50);
-  });
-
   $('#name').click(function() {
     if (!open) {
       if (collapsed) toggleCollapse();
