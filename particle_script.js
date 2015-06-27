@@ -13,16 +13,16 @@ var pProto = Particle.prototype;
 var lastX;
 var lastY;
 pProto.draw = function() {
-  this.stageConfig.context.strokeStyle = '#e0e0ff';
+  this.stageConfig.context.strokeStyle = '#f4f4ff';
   this.stageConfig.context.fillStyle = "#a3a3cc";
   if (Math.random() > 0.995) {
-    this.stageConfig.context.strokeStyle = '#9900FF';
+    this.stageConfig.context.strokeStyle = '#7e7eff';
     this.stageConfig.context.fillStyle = "#FF9900";
     this.particleConfig.modR *= 1.8;
   }
 
   //lines
-  //this.stageConfig.context.moveTo(this.stageConfig.centerX, this.stageConfig.centerY); //for apex
+//  this.stageConfig.context.moveTo(this.stageConfig.centerX, this.stageConfig.centerY); //for apex
   this.stageConfig.context.lineTo(this.particleConfig.x, this.particleConfig.y);
   this.stageConfig.context.lineTo(lastX, lastY); //for linked network
   lastX = this.particleConfig.x;
@@ -85,7 +85,7 @@ proto.layout = function() {
 
 proto.createParticles = function() {
   var i = 0;
-  var l = 75;
+  var l = 75; //count
   for(; i < l; i++) {
     this.particleStore.push({
       x: 0,
