@@ -22,17 +22,19 @@ pProto.draw = function() {
   }
 
   //lines
-//  this.stageConfig.context.moveTo(this.stageConfig.centerX, this.stageConfig.centerY); //for apex
+  //  this.stageConfig.context.moveTo(this.stageConfig.centerX, this.stageConfig.centerY); //for apex
   this.stageConfig.context.lineTo(this.particleConfig.x, this.particleConfig.y);
   this.stageConfig.context.lineTo(lastX, lastY); //for linked network
-  lastX = this.particleConfig.x;
-  lastY = this.particleConfig.y;
   this.stageConfig.context.stroke();
 
   //circle
   this.stageConfig.context.beginPath();
-  this.stageConfig.context.arc(this.particleConfig.x, this.particleConfig.y, this.particleConfig.modR, 0, Math.PI * 2, false);
+  this.stageConfig.context.arc(lastX, lastY, this.particleConfig.modR, 0, Math.PI * 2, false);
   this.stageConfig.context.fill();
+
+  lastX = this.particleConfig.x;
+  lastY = this.particleConfig.y;
+
 };
 
 // ///////////////////////////////////////////////////////////
