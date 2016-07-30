@@ -28,28 +28,32 @@ var renderPage = function(to) {
   });
 };
 
-var toggleCollapse = function() {
-    if (collapsed) {
-      $('.collapsable').animate({
-        width: 'toggle',
-        display: 'block'
-      }, 700);
-      $('.header').animate({
-        width: '90%'
-      }, 400);
-      collapsed = !collapsed;
-      $('#collapse').html('<');
-    } else {
-      $('.collapsable').animate({
-        width: 'toggle'
-      }, 400);
-      $('.header').animate({
-        width: '20%'
-      }, 700);
-      collapsed = !collapsed;
-      $('#collapse').html('>');
-    }
-};
+function toggleCollapse() {
+//   if (collapsed) {
+//     $('.header').animate({
+//       width: '90%'
+//     }, 250);
+//     setTimeout(function() {
+//       $('.collapsable').animate({
+//       }, 300);
+//       $('.collapsable').animate({
+//         opacity: 1
+//       }, 300);
+//     }, 300);
+//   } else {
+//     $('.collapsable').animate({
+//       opacity: 0
+//     }, 250);
+//     setTimeout(function() {
+//       $('.collapsable').animate({
+//       }, 300);
+//       $('.header').animate({
+//         width: '20%'
+//       }, 300);
+//     }, 300);
+//   }
+//   collapsed = !collapsed;
+}
 
 $(document).ready(function() {
   $('#name').click(function() {
