@@ -54,6 +54,7 @@ canvas {
     margin-bottom: auto;
     cursor: pointer;
     white-space: nowrap;
+    text-overflow: hidden;
 }
 
 .link {
