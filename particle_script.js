@@ -119,11 +119,9 @@ proto.update = function() {
   var time = Date.now() - this.stageConfig.start;
   var yProportion = 0.01;
   var xProportion = 0.01;
-  if (time < 2000) {
-    yProportion = time / 2000; //vertical expansion
-  } else if (time < 10000) {
-    yProportion = 1;
-    xProportion = (time - 2000) / 8000; // horizontal expansion
+  if (time < 3000) {
+    yProportion = time / 3000; // vertical expansion
+    xProportion = time / 3000; // horizontal expansion
   } else {
     yProportion = 1;
     xProportion = 1;
@@ -135,8 +133,8 @@ proto.update = function() {
       * Math.sin(this.particleStore[i].angleX)
       * (this.particleStore[i].radX * 1.8 / this.stageConfig.centerX); // depth mod
     this.particleStore[i].y = this.stageConfig.centerY + Math.sin(this.particleStore[i].angleY) * this.particleStore[i].radY * yProportion;
-    this.particleStore[i].angleX += this.particleStore[i].speedX * (10000 / time); //logarithmic decay
-    this.particleStore[i].angleY += this.particleStore[i].speedY * (10000 / time);
+    this.particleStore[i].angleX += this.particleStore[i].speedX * (5000 / time); //logarithmic decay
+    this.particleStore[i].angleY += this.particleStore[i].speedY * (5000 / time);
   }
 };
 

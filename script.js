@@ -6,8 +6,8 @@ var page = '#page1';
 
 var renderPage = function(to) {
   if (page == to) {
-    $('.main').slideToggle();
-    open = !open;
+    // $('.main').slideToggle();
+    // open = !open;
     return;
   }
   $(page).fadeOut(function() {
@@ -29,42 +29,22 @@ var renderPage = function(to) {
 };
 
 function toggleCollapse() {
-//   if (collapsed) {
-//     $('.header').animate({
-//       width: '90%'
-//     }, 250);
-//     setTimeout(function() {
-//       $('.collapsable').animate({
-//       }, 300);
-//       $('.collapsable').animate({
-//         opacity: 1
-//       }, 300);
-//     }, 300);
-//   } else {
-//     $('.collapsable').animate({
-//       opacity: 0
-//     }, 250);
-//     setTimeout(function() {
-//       $('.collapsable').animate({
-//       }, 300);
-//       $('.header').animate({
-//         width: '20%'
-//       }, 300);
-//     }, 300);
-//   }
-//   collapsed = !collapsed;
 }
 
 $(document).ready(function() {
   $('#name').click(function() {
+    $('body').addClass('open');
+  });
+
+  $('#about').click(function() {
     if (!open) {
       if (collapsed) toggleCollapse();
       setTimeout(function() {
-        $('.main').slideToggle()
+        $('.main').slideToggle();
       }, 500);
       open = !open;
     } else {
-      $('.main').slideToggle()
+      $('.main').slideToggle();
       open = !open;
       setTimeout(function() {
         if (!collapsed) toggleCollapse();
@@ -76,7 +56,7 @@ $(document).ready(function() {
     toggleCollapse();
   });
 
-  $('#about').click(function() {
+  $('#name').click(function() {
     renderPage('#page1');
   });
 
