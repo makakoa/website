@@ -70,11 +70,13 @@ iframe {
 #links {
     display: flex;
 }
-#links a {
-    margin-left: 8px;
+
+i.fa {
+    font-size: 22px;
 }
 
 .link {
+    color: #444444;
     text-overflow: clip;
     padding: 8px;
     transition: height 0.3s 300ms, padding 0.3s 300ms, opacity 300ms 600ms, color 300ms;
@@ -159,15 +161,30 @@ iframe {
 }
 
 .page .picture-section {
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
     display: block;
+    position: relative;
+}
+
+.picture-section a {
+    transition: 300ms;
+    color: rgba(0,0,0,0.3);
+}
+.picture-section a:hover {
+    color: #00b4ff;
+}
+.picture-section .fa {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
 }
 
 .picture-section img {
-    max-width: 95%;
+    max-width: 100%;
     max-height: 300px;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
     cursor: pointer;
     padding: 0;
     border: 1px solid rgba(0,0,0,0.3);
@@ -187,6 +204,7 @@ iframe {
     .header {
         position: absolute;
         z-index: 2;
+        top: 0;
         right: 100%;
         background-color: rgba(255,255,255,0.95);
         border-bottom: 1px solid black;
