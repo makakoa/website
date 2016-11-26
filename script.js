@@ -1,5 +1,6 @@
+'use strict';
+
 console.log('Hey thanks for checking out my page!');
-var title, head, text, picture, link;
 var open = false;
 var collapsed = true;
 var page = '#page1';
@@ -70,6 +71,11 @@ $(document).ready(function() {
   $('#flybox').click(function() {
     toggleMenu();
     renderPage('#page2');
+  });
+
+  $('#enviz').click(function() {
+    toggleMenu();
+    renderPage('#page5');
   });
 
   $('#braincryption').click(function() {

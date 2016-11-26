@@ -121,6 +121,7 @@ i.fa {
     box-sizing: border-box;
     width: 0;
     max-height: 90%;
+    max-width: 60ch;
     padding: 20px;
     overflow: auto;
     opacity: 0;
