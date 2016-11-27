@@ -92,18 +92,6 @@ i.fa {
     border-color: #00b4ff;
 }
 
-.header img {
-    height: 30px;
-    display: block;
-    transition: 300ms;
-    padding-bottom: 4px;
-    border-bottom: 1px solid rgba(0,0,0,0);
-}
-
-.header img:hover {
-    border-color: #00b4ff;
-}
-
 .header a {
     margin-top: auto;
     margin-bottom: auto;
@@ -119,6 +107,7 @@ i.fa {
     opacity: 0;
 }
 .open .main {
+    padding: 8px;
     margin-right: 10%;
     margin-left: 10px;
     width: 60%;
@@ -127,22 +116,24 @@ i.fa {
 }
 
 .main h3 {
+    margin: 16px auto;
     font-weight: 300;
     text-align: center;
-    font-size: 30px;
+    font-size: 28px;
     background-color: rgba(255, 255, 255, 0.85);
 }
 
-.page {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
+.main .text {
+    margin: 8px 0;
+    font-size: 18px;
+    text-align: justify;
+    line-height: 26px;
+    background-color: rgba(255, 255, 255, 0.85);
+
 }
 
-.page .content-section {
+.content-section {
     box-sizing: border-box;
-    margin: 20px;
-    padding: 0 20px;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.85);
     /* box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.5); */
@@ -152,12 +143,7 @@ i.fa {
 
 }
 
-.page .content-section p {
-    font-size: 1.2em;
-}
-
-.page .picture-section {
-    max-width: 95%;
+.picture-section {
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -178,6 +164,7 @@ i.fa {
 }
 
 .picture-section img {
+    border-radius: 4px;
     max-width: 100%;
     max-height: 300px;
     display: block;
