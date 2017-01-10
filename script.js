@@ -48,6 +48,11 @@ $(document).ready(function() {
     renderPage('#page5');
   });
 
+  $('#ekko').click(function() {
+    toggleMenu();
+    renderPage('#page6');
+  });
+
   $('#braincryption').click(function() {
     toggleMenu();
     renderPage('#page3');
