@@ -148,4 +148,6 @@ proto.draw = function() {
   }
 };
 
-new ParticlesView();
+window.onload = function() {
+  new ParticlesView();
+};
