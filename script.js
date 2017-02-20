@@ -63,6 +63,11 @@ $(document).ready(function() {
     renderPage('#page4');
   });
 
+  $('#thelobby').click(function() {
+    toggleMenu();
+    renderPage('#page7');
+  });
+
   $('#heyyou').click(function() {
     toggleMenu();
     renderPage('#page5');
